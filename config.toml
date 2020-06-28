@@ -1,9 +1,7 @@
-baseURL = "https://saahilclaypool.github.io/Notes/"
+baseURL = "https://saahilclaypool.github.io/notes/"
 languageCode = "en-us"
-title = "Notes"
 publishDir = "docs"
 canonifyurls = true
-Tagline = 'Notes on Things'
 
 # Enable for syntax highlighting
 pygmentsUseClasses = true
@@ -13,8 +11,9 @@ pygmentsCodefences = true
       unsafe = true
 
 [params]
-    description = "Notes and Ramblings"
+    description = "Ramblings an documentation of various things"
     copyright= "Copyright © 2020 Saahil Claypool"
+    Title = "Notes on things"
 
 [menu]
 
