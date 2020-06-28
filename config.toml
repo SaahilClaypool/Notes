@@ -4,6 +4,13 @@ title = "Notes"
 publishDir = "docs"
 canonifyurls = true
 
+# Enable for syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+[markup.goldmark.renderer]
+      unsafe = true
+
 [params]
     description = "Notes and Ramblings"
     copyright= "Copyright © 2020 Saahil Claypool"
