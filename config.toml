@@ -1,4 +1,4 @@
-baseURL = "https://saahilclaypool.github.io/notes/"
+baseURL = "https://saahilclaypool.github.io/Notes/"
 languageCode = "en-us"
 title = "Notes"
 publishDir = "docs"
