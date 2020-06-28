@@ -1,5 +1,5 @@
 ---
-title: "Creating a site"
+title: "Creating this site"
 date: 2020-06-28T04:14:31-04:00
 weight: 1
 ---
@@ -52,6 +52,13 @@ Below are annotated files that I use to create my base layouts
 
 ### Baseof
 
+Inherited by each of the templates.
+Each template should include the following:
+- class for the site theme
+- if the layout should be flipped
+- the sidebar
+- the actual content
+
 ```html
 {{ partial "head.html" . }}
   <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
@@ -59,13 +66,17 @@ Below are annotated files that I use to create my base layouts
     <main class="content container">
     {{ block "main" . -}}{{- end }}
     </main>
-
-    {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>
 ```
 
 ### Single
+
+Similarly, this template depicts
+- The title
+- The date
+- table of contents if there is a parameter called `.toc` that is set to the string 'true'
+- the actual content
 
 ```html
 {{ define "main" -}}
@@ -82,10 +93,6 @@ Below are annotated files that I use to create my base layouts
 
 {{- end }}
 ```
-
-### List
-
-This one is a bit more interested - interpolated go-code is used to specify which part of the post to show.
 
 ## Syntax Highlighting
 
