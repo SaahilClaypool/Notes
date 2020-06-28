@@ -1,0 +1,18 @@
+baseURL = "https://saahilclaypool.github.io/notes/"
+languageCode = "en-us"
+title = "Notes"
+publishDir = "docs"
+canonifyurls = true
+
+[params]
+    description = "Notes and Ramblings"
+    copyright= "Copyright © 2020 Saahil Claypool"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pre = ""
+    url = "/this_site"
+    weight = -140
