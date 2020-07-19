@@ -11,7 +11,7 @@ pygmentsCodefences = true
       unsafe = true
 
 [params]
-    description = "Ramblings an documentation of various things"
+    description = "A collection of bits of knowledge"
     copyright= "Copyright © 2020 Saahil Claypool"
     Title = "Notes on things"
 
