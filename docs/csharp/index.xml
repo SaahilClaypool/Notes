@@ -12,6 +12,25 @@
     
     
     <item>
+      <title>Configure Await</title>
+      <link>https://saahilclaypool.github.io/notes/csharp/configure_await/</link>
+      <pubDate>Sun, 09 Aug 2020 18:09:50 -0400</pubDate>
+      
+      <guid>https://saahilclaypool.github.io/notes/csharp/configure_await/</guid>
+      <description>&lt;p&gt;Reading through a &lt;a href=&#34;https://github.com/ivanpaulovich/clean-architecture-manga/tree/dotnet5&#34;&gt;asp.net core project&lt;/a&gt;,
+I came across number of calls that looked like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cs&#34; data-lang=&#34;cs&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;affectedRows&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_context&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SaveChangesAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ConfigureAwait&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// ME: what does this do?
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;affectedRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I dug into what this was actually doing by reading &lt;a href=&#34;https://devblogs.microsoft.com/dotnet/configureawait-faq/&#34;&gt;this blog&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;await&lt;/code&gt; uses a custom callback strategy based on the calling context&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConfigureAwait(false)&lt;/code&gt; ignores the custom strategy.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Dotnet query console</title>
       <link>https://saahilclaypool.github.io/notes/csharp/query_console/</link>
       <pubDate>Sat, 11 Jul 2020 18:09:50 -0400</pubDate>

@@ -97,6 +97,38 @@
     <div>
       <hr/>
       <h2>
+        <a href="https://saahilclaypool.github.io/notes/csharp/configure_await/">Configure Await</a>
+        <small class="tag">
+          <a class="tag" href="https://saahilclaypool.github.io/notes/csharp">
+            csharp
+          </a>
+        </small>
+      </h2>
+      <p>Reading through a <a href="https://github.com/ivanpaulovich/clean-architecture-manga/tree/dotnet5">asp.net core project</a>,
+I came across number of calls that looked like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cs" data-lang="cs"><span class="kt">int</span> <span class="n">affectedRows</span> <span class="p">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">_context</span>
+    <span class="p">.</span><span class="n">SaveChangesAsync</span><span class="p">()</span>
+    <span class="p">.</span><span class="n">ConfigureAwait</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// ME: what does this do?
+</span><span class="c1"></span><span class="k">return</span> <span class="n">affectedRows</span><span class="p">;</span>
+</code></pre></div><p>I dug into what this was actually doing by reading <a href="https://devblogs.microsoft.com/dotnet/configureawait-faq/">this blog</a>:</p>
+<ul>
+<li><code>await</code> uses a custom callback strategy based on the calling context</li>
+<li><code>ConfigureAwait(false)</code> ignores the custom strategy.</li>
+</ul>
+    </div>
+    
+    
+    <div>
+      <a href="https://saahilclaypool.github.io/notes/csharp/configure_await/">Read More…</a>
+    </div>
+    
+  
+
+  <article>
+    
+    <div>
+      <hr/>
+      <h2>
         <a href="https://saahilclaypool.github.io/notes/architecture/ubiquitous_language/">Ubiquitious Language - &#39;Software Architect&#39;s Handbook&#39;</a>
         <small class="tag">
           <a class="tag" href="https://saahilclaypool.github.io/notes/architecture">
